@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>动漫之家排行爬取-2018201606李子豫</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/slick.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- READING POSITION INDICATOR -->
+    <progress value="0" id="eskimo-progress-bar">
+        <span class="eskimo-progress-container">
+            <span class="eskimo-progress-bar"></span>
+        </span>
+    </progress>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <!-- SIDEBAR -->
+                <div id="eskimo-sidebar">
+                    <div id="eskimo-sidebar-wrapper" class="d-flex align-items-start flex-column h-100 w-100">
+                        <!-- LOGO -->
+                        <div id="eskimo-logo-cell" class="w-100">
+                            <a class="eskimo-logo-link" href="index.html">
+                                <img src="/static/images/logo.png" class="eskimo-logo" alt="eskimo" />
+                            </a>
+                        </div>
+                        <!-- MENU CONTAINER -->
+                        <div id="eskimo-sidebar-cell" class="w-100">
+                            <!-- MOBILE MENU BUTTON -->
+                            <div id="eskimo-menu-toggle">MENU</div>
+                            <!-- MENU -->
+                            <nav id="eskimo-main-menu" class="menu-main-menu-container">
+                                <ul class="eskimo-menu-ul">
+                                   <li><a href="index.html">主页</a>
+                                    </li>
+                                    <li><a href="other-features.html">统计</a>
+
+                                    </li>
+                                    <li><a href="blog-3-column.html">漫画</a>
+{#                                         <ul class="sub-menu">#}
+{#                                            <li><a href="about.html">Demo 1</a></li>#}
+{#                                            <li><a href="about-2.html">Demo 2</a></li>#}
+{#                                        </ul>#}
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- SOCIAL MEDIA ICONS -->
+                        <div id="eskimo-social-cell" class="mt-auto w-100">
+                            <div id="eskimo-social-inner">
+                                <ul class="eskimo-social-icons">
+                                    <li><a href="#"><i class="fa fa-wechat"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-qq"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                                    <li><a href="https://github.com/yinahou/photo-html"><i class="fa fa-github"></i></a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TOP ICONS -->
+                <ul class="eskimo-top-icons">
+                    <li id="eskimo-panel-icon">
+                        <a href="#eskimo-panel" class="eskimo-panel-open"><i class="fa fa-bars"></i></a>
+                    </li>
+                    <li id="eskimo-search-icon">
+                        <a id="eskimo-open-search" href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+                <!-- PAGE TITLE -->
+                <div class="eskimo-page-title">
+                    <h1><span>统计</span></h1>
+                </div>
+                <!-- ACCORDION -->
+{#                <div id="mp-accordion-1" data-children=".mp-accordion-item" class="mp-accordion">#}
+{#                    <!-- ACCORDION ITEM 1 -->#}
+{#                    <div class="mp-accordion-item">#}
+{#                        <a class="mp-accordion-title " data-toggle="collapse" data-parent="#mp-accordion-1" href="#mp-accordion-item-1" aria-expanded="false" aria-controls="mp-accordion-item-1">#}
+{#                            <i class="fa fa-home"></i> ITEM 1#}
+{#                        </a>#}
+{#                        <div id="mp-accordion-item-1" class="collapse show" role="tabpanel">#}
+{#                            <div class="mp-accordion-content">#}
+{#                                <h3>ACCORDION</h3>#}
+{#                                <p>Duis instituendarum quamquam illum proident. Te an exercitation eu multos incididunt tempor, nescius in quem te an iis fugiat dolor quid, ne sed voluptatibus hic o ea eruditionem, a cernantur est quibusdam, dolor nostrud consectetur. Doctrina multos eiusmod, ubi possumus in pariatur.</p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <!-- ACCORDION ITEM 2 -->#}
+{#                    <div class="mp-accordion-item">#}
+{#                        <a class="mp-accordion-title collapsed" data-toggle="collapse" data-parent="#mp-accordion-1" href="#mp-accordion-item-2" aria-expanded="false" aria-controls="mp-accordion-item-2">#}
+{#                            <i class="fa fa-bullhorn"></i> ITEM 2#}
+{#                        </a>#}
+{#                        <div id="mp-accordion-item-2" class="collapse" role="tabpanel">#}
+{#                            <div class="mp-accordion-content">#}
+{#                                <h3>LOREM IPSUM</h3>#}
+{#                                <p>Duis instituendarum quamquam illum proident. Te an exercitation eu multos incididunt tempor, nescius in quem te an iis fugiat dolor quid, ne sed voluptatibus hic o ea eruditionem, a cernantur est quibusdam, dolor nostrud consectetur. Doctrina multos eiusmod, ubi possumus in pariatur.</p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <!-- ACCORDION ITEM 3 -->#}
+{#                    <div class="mp-accordion-item">#}
+{#                        <a class="mp-accordion-title collapsed" data-toggle="collapse" data-parent="#mp-accordion-1" href="#mp-accordion-item-3" aria-expanded="false" aria-controls="mp-accordion-item-3">#}
+{#                            <i class="fa fa-bell"></i> ITEM 3#}
+{#                        </a>#}
+{#                        <div id="mp-accordion-item-3" class="collapse" role="tabpanel">#}
+{#                            <div class="mp-accordion-content">#}
+{#                                <h3>COMMODO AUTE</h3>#}
+{#                                <p>Duis instituendarum quamquam illum proident. Te an exercitation eu multos incididunt tempor, nescius in quem te an iis fugiat dolor quid, ne sed voluptatibus hic o ea eruditionem, a cernantur est quibusdam, dolor nostrud consectetur. Doctrina multos eiusmod, ubi possumus in pariatur.</p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+                <!-- DIVIDER -->
+                <hr />
+                <!-- TABS -->
+                <!-- TABS NAVIGATION -->
+                <ul class="nav nav-tabs">
+                    <!-- TAB 1 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#mp-tab-1" aria-expanded="true">
+                            <i class="fa fa-microphone"></i> 最火漫画
+                        </a>
+                    </li>
+                    <!-- TAB 2 -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#mp-tab-2" aria-expanded="false">
+                            <i class="fa fa-rocket"></i> 最热作者
+                        </a>
+                    </li>
+                    <!-- TAB 3 -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#mp-tab-3" aria-expanded="false">
+                            <i class="fa fa-android"></i> 最火TAG
+                        </a>
+                    </li>
+                </ul>
+                <!-- TABS CONTENT -->
+                <div class="eskimo-tabs-content tab-content">
+                    <!-- TAB 1 -->
+                    <div class="tab-pane fade active show" id="mp-tab-1" role="button" aria-expanded="true">
+                        <h3>最火漫画</h3>
+                        <img src="/1/b1.jpg">
+
+                    </div>
+                    <!-- TAB 2 -->
+                    <div class="tab-pane fade " id="mp-tab-2" role="button" aria-expanded="false">
+                        <h3>最热作者</h3>
+                        <img src="/1/b2.jpg">
+                    </div>
+                    <!-- TAB 3 -->
+                    <div class="tab-pane fade " id="mp-tab-3" role="button" aria-expanded="false">
+                        <h3>最火TAG</h3>
+                        <img src="/1/b3.jpg">
+                    </div>
+                </div>
+                <!-- DIVIDER -->
+                <hr />
+                <div class="row">
+                    <!-- ALERTS -->
+                    <div class="col-12 col-lg-6">
+                        <h5 class="eskimo-title-with-border"><span>总榜最强</span></h5>
+                        <!-- ALERT INFO -->
+                        <div class="alert alert-info">
+                            <div class="close" data-dismiss="alert">&times;</div>
+                            <h6>妖神记</h6>
+                            <p>妖神一出，谁与争锋？ 这是一个妖灵的世界，融合了妖灵，就可以成为强大的妖灵师。 因为一本时空妖灵之书，时空发生了扭转，当一切重新开始之时，命运之轮缓缓转动。... </p>
+                        </div>
+                        <!-- ALERT SUCCESS -->
+                        <div class="alert alert-success">
+                            <div class="close" data-dismiss="alert">&times;</div>
+                            <h6>我家大师兄脑子有坑</h6>
+                            <p>主角穿越到修真世界之后，发现自己不是主角设定！这不就坑爹了吗？打怪升级不重要了！活下去才是问题啊！... </p>
+                        </div>
+                        <!-- ALERT WARNING -->
+                        <div class="alert alert-warning">
+                            <div class="close" data-dismiss="alert">&times;</div>
+                            <h6>崩坏3rd</h6>
+                            <p>延续《崩坏学园2》主线剧情,崩坏学园系列漫画最新作！ 敌人不再只是死士，那拥有压倒性力量的巨大身影究竟是.....? 无量塔姬子，圣芙蕾雅学园，律者，女武神..........</p>
+                        </div>
+                        <!-- ALERT DANGER -->
+                        <div class="alert alert-danger">
+                            <div class="close" data-dismiss="alert">&times;</div>
+                            <h6>魔王与勇者与圣剑神殿</h6>
+                            <p>RAIEO大陆，根据史书记载，这片大陆曾经充斥着恶魔与血腥，魔王艾尔菲用她的魔剑统领众魔族，那是最为黑暗的时代。后来光明勇士出现，打败了魔王，封印了她的魔力，让RAIEO... </p>
+                        </div>
+                    </div>
+                    <!-- PROGRESS BARS -->
+                    <div class="col-12 col-lg-6">
+                        <h5 class="eskimo-title-with-border"><span>阅读数据</span></h5>
+                        <!-- PROGRESS BAR SUCCESS -->
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 100%" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"><span></span>102924896</div>
+                        </div>
+                        <!-- PROGRESS BAR INFO -->
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width: 90%" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"><span></span>90884638</div>
+                        </div>
+                        <!-- PROGRESS BAR WARNING -->
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 70%" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"><span></span>67061588</div>
+                        </div>
+                        <!-- PROGRESS BAR DANGER -->
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width: 55%" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"><span></span>50534711</div>
+                        </div>
+                        <br><br>
+                        <h5 class="eskimo-title-with-border"><span>评论数据</span></h5>
+                        <!-- ANIMATED PROGRESS BAR SUCCESS -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width: 22%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><span></span>255875</div>
+                        </div>
+                        <!-- ANIMATED PROGRESS BAR INFO -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" style="width: 100%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span></span>1254945</div>
+                        </div>
+                        <!-- ANIMATED PROGRESS BAR WARNING -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" style="width: 59%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span></span>605287</div>
+                        </div>
+                        <!-- ANIMATED PROGRESS BAR DANGER -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width: 14%" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><span></span>147106</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DIVIDER -->
+                <hr />
+                <!-- LARGE BUTTONS -->
+                <h5 class="eskimo-title-with-border"><span>标签热度</span></h5>
+                <p>
+                    <a href="#" class="btn btn-primary btn-lg">&emsp;&emsp;&emsp;冒险&emsp;&emsp;&emsp;</a>
+                    <a href="#" class="btn btn-default btn-lg">&emsp;&emsp;&ensp;魔法&emsp;&emsp;&ensp;</a>
+                    <a href="#" class="btn btn-success btn-lg">&ensp;&ensp;&ensp;校园&ensp;&ensp;&ensp;</a>
+                    <a href="#" class="btn btn-info btn-lg">&ensp;&ensp;&ensp;爱情&ensp;&ensp;&ensp;</a>
+                    <a href="#" class="btn btn-warning btn-lg">&ensp;治愈&ensp;</a>
+                    <a href="#" class="btn btn-danger btn-lg">&ensp;职场&ensp;</a>
+                    <a href="#" class="btn btn-primary btn-lg">&ensp;热血&ensp;</a>
+                </p>
+                <p>
+                    <a href="#" class="btn btn-outline-primary btn-lg">&emsp;&emsp;&emsp;27&ensp;&emsp;&emsp;&emsp;</a>
+                    <a href="#" class="btn btn-outline-default btn-lg">&emsp;&emsp;&ensp;24&ensp;&ensp;&emsp;&emsp;&ensp;</a>
+                    <a href="#" class="btn btn-outline-success btn-lg">&ensp;&ensp;&ensp;23&ensp;&ensp;&ensp;&ensp;&ensp;</a>
+                    <a href="#" class="btn btn-outline-info btn-lg">&ensp;&ensp;&ensp;23&ensp;&ensp;&ensp;&ensp;</a>
+                    <a href="#" class="btn btn-outline-warning btn-lg">&ensp;21&ensp;&ensp;</a>
+                    <a href="#" class="btn btn-outline-danger btn-lg">&ensp;21&ensp;&ensp;&ensp;</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg">&ensp;20&ensp;&ensp;</a>
+                </p>
+
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer id="eskimo-footer">
+            <div class="container">
+                <div class="row eskimo-footer-wrapper">
+                    <!-- FOOTER WIDGET 1 -->
+                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                        <h5 class="eskimo-title-with-border"><span>我滴github</span></h5>
+                        <p><a href="about.html" class="btn btn-default">Read More</a></p>
+                    </div>
+                    <!-- FOOTER WIDGET 2 -->
+                    <div class="col-12 col-lg-6">
+                        <h5 class="eskimo-title-with-border"><span>注册</span></h5>
+                        <form method="post" action="index.html">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="EMAIL" placeholder="输入恁的邮箱" required />
+                                <div class="input-group-append">
+                                    <input type="submit" value="Sign up" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- CREDITS -->
+                <div class="eskimo-footer-credits">
+                    <p>
+                        Made with love by <a href="https://themeforest.net/user/egemenerd" target="_blank">Egemenerd</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- GO TO TOP BUTTON -->
+    <a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- SLIDE PANEL OVERLAY -->
+    <div id="eskimo-overlay"></div>
+    <!-- SLIDE PANEL -->
+    <div id="eskimo-panels">
+        <aside id="eskimo-panel" class="eskimo-panel">
+            <div class="eskimo-panel-inner">
+                <!-- CLOSE SLIDE PANEL BUTTON -->
+                <a href="#" class="eskimo-panel-close"><i class="fa fa-times"></i></a>
+                <!-- AUTHOR BOX -->
+                <div class="eskimo-author-box eskimo-widget">
+                   <div class="eskimo-author-img">
+                        <img src="/static/images/1.ico" alt="JOHN DOE" />
+                    </div>
+                    <h3><span>Yinahou</span></h3>
+                    <p class="eskimo-author-subtitle">2018201606_李子豫</p>
+
+                    <div class="eskimo-author-box-btn">
+                        <a class="btn btn-default" href="https://github.com/yinahou/photo-html">CONTACT ME</a>
+                    </div>
+                </div>
+                <!-- RECENT POSTS -->
+{#                <div class="eskimo-recent-entries eskimo-widget">#}
+{#                    <h5 class="eskimo-title-with-border"><span>Recent Posts</span></h5>#}
+{#                    <ul>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Ketchup Flavored Ice Cream!</a>#}
+{#                            <span class="post-date">May 28, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Hair You've Always Dreamed Of</a>#}
+{#                            <span class="post-date">May 27, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">15 Of The World's Best Carnivals</a>#}
+{#                            <span class="post-date">May 25, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">5 Ways to a Healthy Lifestyle</a>#}
+{#                            <span class="post-date">May 25, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Best Breakfast In The World</a>#}
+{#                            <span class="post-date">May 23, 2018</span>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </div>#}
+                <!-- CATEGORIES -->
+                <div class="eskimo-categories eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>热门分类</span></h5>
+                    <ul>
+                        <li>
+                            <a href="category.html" title="The best restaurants, cafes, bars and shops in town.">冒险</a> <span class="badge badge-pill badge-default">32</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="An up-to-date, personal urban guide.">热血</a> <span class="badge badge-pill badge-default">24</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="Latest technology news and updates.">格斗</a> <span class="badge badge-pill badge-default">14</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="Travel advice, information and inspiration.">搞笑</a> <span class="badge badge-pill badge-default">53</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="The latest news about movies and TV shows.">恋爱</a> <span class="badge badge-pill badge-default">22</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- TAGS -->
+                <div class="eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>Tags</span></h5>
+                    <div class="eskimo-tag-cloud">
+                        <a href="/search.html?s=魔法">魔法<span>24</span></a>
+                        <a href="/search.html?s=冒险">冒险<span>33</span></a>
+                        <a href="/search.html?s=爱情">爱情<span>23</span></a>
+                        <a href="/search.html?s=仙侠">仙侠<span>12</span></a>
+                        <a href="/search.html?s=百合">百合<span>7</span></a>
+                        <a href="/search.html?s=校园">校园<span>23</span></a>
+                        <a href="/search.html?s=奇幻">奇幻<span>13</span></a>
+                        <a href="/search.html?s=格斗">格斗<span>9</span></a>
+                        <a href="/search.html?s=热血">热血<span>21</span></a>
+                        <a href="/search.html?s=科幻">科幻<span>15</span></a>
+                        <a href="/search.html?s=职场">职场<span>21</span></a>
+                        <a href="/search.html?s=治愈">治愈<span>20</span></a>
+                        <a href="/search.html?s=其他">其他<span>9</span></a>
+                        <a href="/search.html?s=宅系">宅系<span>12</span></a>
+                        <a href="/search.html?s=悬疑">悬疑<span>13</span></a>
+                        <a href="/search.html?s=励志">励志<span>17</span></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- FULLSCREEN SEARCH -->
+    <div id="eskimo-fullscreen-search">
+        <div id="eskimo-fullscreen-search-content">
+            <a href="#" id="eskimo-close-search"><i class="fa fa-times"></i></a>
+            <form role="search" method="get" action="search.html" class="eskimo-lg-form">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Enter a keyword..." name="s" />
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- JS FILES -->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/panel.js"></script>
+    <script src="/static/js/reading-position-indicator.js"></script>
+    <script src="/static/js/custom.js"></script>
+</body>
+
+</html>

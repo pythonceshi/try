@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>动漫之家排行爬取-2018201606李子豫</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/slick.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- READING POSITION INDICATOR -->
+    <progress value="0" id="eskimo-progress-bar">
+        <span class="eskimo-progress-container">
+            <span class="eskimo-progress-bar"></span>
+        </span>
+    </progress>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <!-- SIDEBAR -->
+                <div id="eskimo-sidebar">
+                    <div id="eskimo-sidebar-wrapper" class="d-flex align-items-start flex-column h-100 w-100">
+                        <!-- LOGO -->
+                        <div id="eskimo-logo-cell" class="w-100">
+                            <a class="eskimo-logo-link" href="index.html">
+                                <img src="/static/images/logo.png" class="eskimo-logo" alt="eskimo" />
+                            </a>
+                        </div>
+                        <!-- MENU CONTAINER -->
+                        <div id="eskimo-sidebar-cell" class="w-100">
+                            <!-- MOBILE MENU BUTTON -->
+                            <div id="eskimo-menu-toggle">MENU</div>
+                            <!-- MENU -->
+                            <nav id="eskimo-main-menu" class="menu-main-menu-container">
+                                <ul class="eskimo-menu-ul">
+                                    <li><a href="index.html">主页</a>
+                                    </li>
+                                    <li><a href="other-features.html">统计</a>
+
+                                    </li>
+                                    <li><a href="blog-3-column.html">漫画</a>
+{#                                         <ul class="sub-menu">#}
+{#                                            <li><a href="about.html">Demo 1</a></li>#}
+{#                                            <li><a href="about-2.html">Demo 2</a></li>#}
+{#                                        </ul>#}
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- SOCIAL MEDIA ICONS -->
+                        <div id="eskimo-social-cell" class="mt-auto w-100">
+                            <div id="eskimo-social-inner">
+                                <ul class="eskimo-social-icons">
+                                    <li><a href="#"><i class="fa fa-wechat"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-qq"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                                    <li><a href="https://github.com/yinahou/photo-html"><i class="fa fa-github"></i></a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TOP ICONS -->
+                <ul class="eskimo-top-icons">
+                    <li id="eskimo-panel-icon">
+                        <a href="#eskimo-panel" class="eskimo-panel-open"><i class="fa fa-bars"></i></a>
+                    </li>
+                    <li id="eskimo-search-icon">
+                        <a id="eskimo-open-search" href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+                <!-- SLIDER -->
+                <div class="eskimo-carousel-container eskimo-bg-loader">
+                    <div id="eskimo-post-slider" class="eskimo-slider">
+                        <!-- SLIDE 1 -->
+                        <div>
+                            <a class="eskimo-slider-img" href="https://www.dmzj.com/info/xuejiyuqishi.html"></a>
+                            <ul class="eskimo-slider-image-meta eskimo-image-meta-post">
+                                <li><a href="#"><span class="badge badge-default">热门!</span></a></li>
+                                <li><a href="#"><span class="badge badge-default">冒险</span></a></li>
+                                <li><a href="#"><span class="badge badge-default">格斗</span></a></li>
+                                <li><a href="#"><span class="badge badge-default">热血</span></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            <img src="/1/k1.jpg" alt="Ketchup Flavored Ice Cream!" />
+                            <div class="eskimo-slider-desc">
+                                <div class="eskimo-slider-desc-inner">
+                                    <h2 class="card-title">血姬与骑士</h2>
+                                    <p>身为圣骑士的我在一次与吸血种的遭遇战中失利被俘。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDE 2 -->
+                        <div>
+                            <a class="eskimo-slider-img" href="https://www.dmzj.com/info/pohaidingding.html"></a>
+                            <ul class="eskimo-slider-image-meta eskimo-image-meta-post">
+                                <li><a href="#"><span class="badge badge-default">热门!</span></a></li>
+                                <li><a href="#"><span class="badge badge-default">搞笑</span></a></li>
+                                <li><a href="#"><span class="badge badge-default">生活</span></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            <img src="/1/k2.jpg" alt="Hair You've Always Dreamed Of" />
+                            <div class="eskimo-slider-desc">
+                                <div class="eskimo-slider-desc-inner">
+                                    <h2 class="card-title">迫害钉钉</h2>
+                                    <p>迫害钉钉娘的日常</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDE 3 -->
+                        <div>
+                            <a class="eskimo-slider-img" href="single-post.html"></a>
+                            <ul class="eskimo-slider-image-meta eskimo-image-meta-post">
+                                <li><a href="single-post.html"><span class="badge badge-default">热门!</span></a></li>
+                                <li><a href="category.html"><span class="badge badge-default">冒险</span></a></li>
+                                <li><a href="category.html"><span class="badge badge-default">热血</span></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            <img src="/1/k3.jpg" alt="15 Of The World's Best Carnivals" />
+                            <div class="eskimo-slider-desc">
+                                <div class="eskimo-slider-desc-inner">
+                                    <h2 class="card-title">崩坏3rd</h2>
+                                    <p>延续《崩坏学园2》主线剧情,崩坏学园系列漫画最新作！ 敌人不再只是死士，那拥有压倒性力量的巨大身影究竟是.....? 无量塔姬子，圣芙蕾雅学园，律者，女武神.......更广阔的未知世界展现在众主角眼前！ 琪亚娜，芽衣，布洛妮娅的身世也即将揭晓，是携手过去拯救世界还是沉溺其中止步不前？少女们的决心，尽请期待！！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- BLOG POSTS -->
+                    <!-- VIEW ALL BUTTON -->
+                <div class="eskimo-view-more">
+                    <a class="btn btn-default" href="#">最近更新</a>
+                </div>
+                <hr>
+                <!-- POST 1 -->
+                <div class="card card-horizontal">
+                    <div class="card-body">
+                        <div class="card-horizontal-left">
+                            <div class="card-category">
+                                <a href="category.html">SF轻小说</a> </div>
+                            <h3 class="card-title"><a href="https://www.dmzj.com/info/xuejiyuqishi.html">血姬与骑士</a></h3>
+                            <div class="card-excerpt">
+                                <p>身为圣骑士的我在一次与吸血种的遭遇战中失利被俘。</p>
+
+
+                            </div>
+                            <div class="card-horizontal-meta">
+                                <div class="eskimo-author-meta">
+                                    <a class="author-meta" >更新至：第12话</a>
+                                </div>
+                                <div class="eskimo-date-meta">
+                                    <a href="https://www.dmzj.com/info/xuejiyuqishi.html">热度：1570692</a>
+                                </div>
+                                <div class="eskimo-reading-meta">冒险；热血；格斗</div>
+                            </div>
+                        </div>
+                        <div class="card-horizontal-right" data-img="/1/1.jpg">
+                            <a class="card-featured-img" href="https://www.dmzj.com/info/xuejiyuqishi.html"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- POST 2 -->
+                <div class="card card-horizontal">
+                    <div class="card-body">
+                        <div class="card-horizontal-left">
+                            <div class="card-category">
+                                <a href="category.html">黑白今天没更新</a> </div>
+                            <h3 class="card-title"><a href="https://www.dmzj.com/info/tongzhenyongzhe2.html">童贞勇者</a></h3>
+                            <div class="card-excerpt">
+                                <p>没有什么是真正的勇者不能上的！</p>
+                            </div>
+                            <div class="card-horizontal-meta">
+                                <div class="eskimo-author-meta">
+                                    <a class="author-meta" >更新至：第01话</a>
+                                </div>
+                                <div class="eskimo-date-meta">
+                                    <a href="single-post.html">热度：329307</a>
+                                </div>
+                                <div class="eskimo-reading-meta">爱情/热血/搞笑</div>
+                            </div>
+                        </div>
+                        <div class="card-horizontal-right" data-img="/1/2.jpg">
+                            <a class="card-featured-img" href="https://www.dmzj.com/info/tongzhenyongzhe2.html"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- POST 3 -->
+                <div class="card card-horizontal">
+                    <div class="card-body">
+                        <div class="card-horizontal-left">
+                            <div class="card-category">
+                                <a href="category.html">作者：东川摩司</a> </div>
+                            <h3 class="card-title"><a href="https://www.dmzj.com/info/guanyuwoquyueliaosupaozhehuishi.html">关于我去约了素炮这回事</a></h3>
+                            <div class="card-excerpt">
+                                <p>看了永田卡比老师的漫画有感而发，由此也来记录下我的故事——关于我去约了素炮这回事。...</p>
+                            </div>
+                            <div class="card-horizontal-meta">
+                                <div class="eskimo-author-meta">
+                                    <a class="author-meta" href="author.html">更新至：第04话</a>
+                                </div>
+                                <div class="eskimo-date-meta">
+                                    <a href="single-post.html">人气：293401</a>
+                                </div>
+                                <div class="eskimo-reading-meta">百合/生活</div>
+                            </div>
+                        </div>
+                        <div class="card-horizontal-right" data-img="/1/3.jpg">
+                            <a class="card-featured-img" href="https://www.dmzj.com/info/guanyuwoquyueliaosupaozhehuishi.html"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- POST 4 -->
+                <div class="card card-horizontal">
+                    <div class="card-body">
+                        <div class="card-horizontal-left">
+                            <div class="card-category">
+                                <a href="category.html">作者：RC</a> </div>
+                            <h3 class="card-title"><a href="https://www.dmzj.com/info/dalisirizhi.html">大理寺日志</a></h3>
+                            <div class="card-excerpt">
+                                <p>霸道上司是萌喵，唐朝公务员热热闹闹的日常。...</p>
+                            </div>
+                            <div class="card-horizontal-meta">
+                                <div class="eskimo-author-meta">
+                                    <a class="author-meta" >更新至：第238话</a>
+                                </div>
+                                <div class="eskimo-date-meta">
+                                    <a href="single-post.html">本周人气：208776</a>
+                                </div>
+                                <div class="eskimo-reading-meta">热血/武侠/搞笑</div>
+                            </div>
+                        </div>
+                        <div class="card-horizontal-right" data-img="/1/5.jpg">
+                            <a class="card-featured-img" href="https://www.dmzj.com/info/dalisirizhi.html"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <!-- DIVIDER -->
+                <hr class="section-divider" />
+
+                <!-- CAROUSEL -->
+                <div class="eskimo-widget-title">
+                    <h3 class="eskimo-carousel-title"><span>最火评论区</span></h3>
+                </div>
+
+                <div class="eskimo-carousel-container">
+                    <div class="eskimo-carousel-view-more">
+                        <a href="blog-3-column.html">更多</a>
+                    </div>
+
+                    <div id="eskimo-post-carousel" class="eskimo-carousel">
+                        <!-- CAROUSEL ITEM 1 -->
+                        <div>
+                            <div class="card-masonry card-small">
+                                <div class="card">
+                                    <a href="single-post.html">
+                                        <img class="card-vertical-img" src="/1/10.jpg" alt="Ketchup Flavored Ice Cream!" />
+                                    </a>
+                                    <div class="card-border">
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <a href="single-post.html">剧象漫画</a>
+                                            </div>
+                                            <h5 class="card-title"><a href="single-post.html">我家大师兄脑子有坑</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CAROUSEL ITEM 2 -->
+                        <div>
+                            <div class="card-masonry card-small">
+                                <div class="card">
+                                    <a href="single-post.html">
+                                        <img class="card-vertical-img" src="/1/19.jpg" alt="Hair You've Always Dreamed Of" />
+                                    </a>
+                                    <div class="card-border">
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <a href="single-post.html">等叁等</a>
+                                            </div>
+                                            <h5 class="card-title"><a href="single-post.html">转生古代虐文女主而口吐芬芳</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CAROUSEL ITEM 3 -->
+                        <div>
+                            <div class="card-masonry card-small">
+                                <div class="card">
+                                    <a href="single-post.html">
+                                        <img class="card-vertical-img" src="/1/23.jpg" alt="15 Of The World's Best Carnivals" />
+                                    </a>
+                                    <div class="card-border">
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <a href="single-post.html">SF轻小说</a>
+                                            </div>
+                                            <h5 class="card-title"><a href="single-post.html">反派NPC求生史</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CAROUSEL ITEM 4 -->
+                        <div>
+                            <div class="card-masonry card-small">
+                                <div class="card">
+                                    <a href="single-post.html">
+                                        <img class="card-vertical-img" src="/1/27.jpg" alt="5 Ways to a Healthy Lifestyle" />
+                                    </a>
+                                    <div class="card-border">
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <a href="single-post.html">使徒子</a>
+                                            </div>
+                                            <h5 class="card-title"><a href="single-post.html">一条狗</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CAROUSEL ITEM 5 -->
+                        <div>
+                            <div class="card-masonry card-small">
+                                <div class="card">
+                                    <a href="single-post.html">
+                                        <img class="card-vertical-img" src="/1/39.jpg" alt="Best Breakfast In The World" />
+                                    </a>
+                                    <div class="card-border">
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <a href="single-post.html">MAD茧</a>
+                                            </div>
+                                            <h5 class="card-title"><a href="single-post.html">精灵之蛋</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+{#        <footer id="eskimo-footer">#}
+{#            <div class="container">#}
+{#                <div class="row eskimo-footer-wrapper">#}
+{#                    <!-- FOOTER WIDGET 1 -->#}
+{#                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">#}
+{#                        <h5 class="eskimo-title-with-border"><span>登录</span></h5>#}
+{#                        <form method="post" action="index.html">#}
+{#                            <label></label>#}
+{#                            <div class="input-group">#}
+{#                                <input type="email" class="form-control password-reset-link" name="EMAIL1" placeholder="输入您的邮箱" required />#}
+{##}
+{#                            </div><label></label>#}
+{#                            <div class="input-group">#}
+{#                                <input type="password" class="form-control" name="PASSWORD" style="mso-endnote-display: none" placeholder="输入您的密码" required />#}
+{##}
+{#                            </div><label></label>#}
+{#                            <div class="input-group">#}
+{#                                <input type="text" class="form-control" name="CHECK" placeholder="输入3+11=？" required />#}
+{##}
+{#                            </div><label></label>#}
+{#                            <div class="input-group">#}
+{#                                    <input type="submit" value="Sign in"  name="in" class="btn btn-default" />#}
+{#                                <div>#}
+{#                                    <a href="#sidepanel1" class="eskimo-panel-open"><i href="#end" class="btn btn-default">忘记密码？</i>#}
+{#                                        <marquee direction="down"></marquee>#}
+{#                                    </a>#}
+{#                                </div>#}
+{##}
+{#                            </div>#}
+{##}
+{##}
+{#                            <label></label>#}
+{##}
+{#                        </form>#}
+{##}
+{##}
+{#                    </div>#}
+{#                    <!-- FOOTER WIDGET 2 -->#}
+{#                    <div class="col-12 col-lg-6">#}
+{#                        <h5 class="eskimo-title-with-border"><span>注册</span></h5>#}
+{#                        <form method="post" action="index.html">#}
+{#                            <label></label>#}
+{#                            <div class="input-group">#}
+{#                                <input type="email" class="form-control" name="EMAIL2" placeholder="输入您的邮箱" required />#}
+{##}
+{#                            </div><label></label>#}
+{##}
+{#                            <div class="input-group">#}
+{#                                <input type="text" class="form-control" name="USERNAME" placeholder="输入您的用户名" required />#}
+{##}
+{#                            </div><label></label>#}
+{#                            <div class="input-group">#}
+{#                                <input type="password" class="form-control" name="PASSWORD_IN" style="mso-endnote-display: none" placeholder="输入您的密码" required />#}
+{##}
+{#                            </div><label></label>#}
+{#                            <div class="input-group">#}
+{#                                <input type="password" class="form-control" name="PASSWORD_CONFIRM" style="mso-endnote-display: none" placeholder="确认您的密码" required />#}
+{##}
+{#                            </div><label></label>#}
+{#                            <div class="input-group-append">#}
+{#                                    <input type="submit" value="Sign Up" name="up" class="btn btn-default" />#}
+{#                            </div>#}
+{#                        </form>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <!-- CREDITS -->#}
+{#                <div class="eskimo-footer-credits">#}
+{#                    <p>#}
+{#                        Made with love by <a href="https://themeforest.net/user/egemenerd" target="_blank">Egemenerd</a>#}
+{#                    </p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </footer>#}
+    </div>
+    <!-- GO TO TOP BUTTON -->
+    <a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- SLIDE PANEL OVERLAY -->
+    <div id="eskimo-overlay"></div>
+    <!-- SLIDE PANEL -->
+    <div id="eskimo-panels">
+        <aside id="eskimo-panel" class="eskimo-panel">
+            <div class="eskimo-panel-inner">
+                <!-- CLOSE SLIDE PANEL BUTTON -->
+                <a href="#" class="eskimo-panel-close"><i class="fa fa-times"></i></a>
+                <!-- AUTHOR BOX -->
+                <div class="eskimo-author-box eskimo-widget">
+                    <div class="eskimo-author-img">
+                        <img src="/static/images/1.ico" alt="JOHN DOE" />
+                    </div>
+                    <h3><span>{{ yonghu.username }}</span></h3>
+                    <p class="eskimo-author-subtitle">{{ yonghu.mail }}</p>
+
+
+                        <form method="post" action="index.html">
+
+
+                            <div class="input-group-append">
+
+
+                            <div>
+                                    <a href="#sidepanel2" class="eskimo-panel-open"><i href="#end" class="btn btn-default">登  录</i>
+{#                                        <marquee direction="down"></marquee>#}
+                                    </a>
+                                </div>
+                            <div>
+                                    <a href="#sidepanel3" class="eskimo-panel-open"><i href="#end" class="btn btn-default">注  册</i>
+{#                                        <marquee direction="down"></marquee>#}
+                                    </a>
+                                </div>
+                                <input type="submit" value="注  销" name="down" class="btn btn-default" />
+                                <div>
+                                    <a href="#sidepanel4" class="eskimo-panel-open"><i href="#end" class="btn btn-default">改  密  码</i>
+{#                                        <marquee direction="down"></marquee>#}
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+
+                </div>
+                <!-- RECENT POSTS -->
+{#                <div class="eskimo-recent-entries eskimo-widget">#}
+{#                    <h5 class="eskimo-title-with-border"><span>Recent Posts</span></h5>#}
+{#                    <ul>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Ketchup Flavored Ice Cream!</a>#}
+{#                            <span class="post-date">May 28, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Hair You've Always Dreamed Of</a>#}
+{#                            <span class="post-date">May 27, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">15 Of The World's Best Carnivals</a>#}
+{#                            <span class="post-date">May 25, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">5 Ways to a Healthy Lifestyle</a>#}
+{#                            <span class="post-date">May 25, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Best Breakfast In The World</a>#}
+{#                            <span class="post-date">May 23, 2018</span>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </div>#}
+                <!-- CATEGORIES -->
+                <div class="eskimo-categories eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>热门分类</span></h5>
+                    <ul>
+                        <li>
+                            <a href="category.html" title="The best restaurants, cafes, bars and shops in town.">冒险</a> <span class="badge badge-pill badge-default">32</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="An up-to-date, personal urban guide.">热血</a> <span class="badge badge-pill badge-default">24</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="Latest technology news and updates.">格斗</a> <span class="badge badge-pill badge-default">14</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="Travel advice, information and inspiration.">搞笑</a> <span class="badge badge-pill badge-default">53</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="The latest news about movies and TV shows.">恋爱</a> <span class="badge badge-pill badge-default">22</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- TAGS -->
+                <div class="eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>Tags</span></h5>
+                    <div class="eskimo-tag-cloud">
+                        <a href="/search.html?s=魔法">魔法<span>24</span></a>
+                        <a href="/search.html?s=冒险">冒险<span>33</span></a>
+                        <a href="/search.html?s=爱情">爱情<span>23</span></a>
+                        <a href="/search.html?s=仙侠">仙侠<span>12</span></a>
+                        <a href="/search.html?s=百合">百合<span>7</span></a>
+                        <a href="/search.html?s=校园">校园<span>23</span></a>
+                        <a href="/search.html?s=奇幻">奇幻<span>13</span></a>
+                        <a href="/search.html?s=格斗">格斗<span>9</span></a>
+                        <a href="/search.html?s=热血">热血<span>21</span></a>
+                        <a href="/search.html?s=科幻">科幻<span>15</span></a>
+                        <a href="/search.html?s=职场">职场<span>21</span></a>
+                        <a href="/search.html?s=治愈">治愈<span>20</span></a>
+                        <a href="/search.html?s=其他">其他<span>9</span></a>
+                        <a href="/search.html?s=宅系">宅系<span>12</span></a>
+                        <a href="/search.html?s=悬疑">悬疑<span>13</span></a>
+                        <a href="/search.html?s=励志">励志<span>17</span></a>
+                    </div>
+                </div>
+                <!-- TAGS -->
+
+            </div>
+        </aside>
+    </div>
+
+    <!-- 找回 -->
+    <div id="side1">
+        <aside id="sidepanel1" class="eskimo-panel">
+            <div class="eskimo-panel-inner">
+                <!-- CLOSE SLIDE PANEL BUTTON -->
+                <a href="#" class="eskimo-panel-close"><i class="fa fa-times"></i></a>
+                <!-- TAGS -->
+                <div class="eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>找回密码</span></h5>
+                        <form method="post" action="index.html"><a id="end"></a>
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="EMAIL2" placeholder="输入您的邮箱" required />
+
+                            </div><label></label>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="USERNAME" placeholder="输入您的用户名" required />
+
+                            </div><label></label>
+{#                            <div class="input-group">#}
+{#                                <input type="password" class="form-control" name="PASSWORD_IN" style="mso-endnote-display: none" placeholder="输入您的密码" required />#}
+{##}
+{#                            </div><label></label>#}
+{#                            <div class="input-group">#}
+{#                                <input type="password" class="form-control" name="PASSWORD_CONFIRM" style="mso-endnote-display: none" placeholder="确认您的密码" required />#}
+{#                            </div><label></label>#}
+                            <div class="eskimo-author-box-btn">
+                                    <input href="#sidepanel4" type="submit" value="check" name="check" class="btn btn-default" />
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- 登录 -->
+    <div id="side2">
+        <aside id="sidepanel2" class="eskimo-panel">
+            <div class="eskimo-panel-inner">
+                <!-- CLOSE SLIDE PANEL BUTTON -->
+                <a href="#" class="eskimo-panel-close"><i class="fa fa-times"></i></a>
+                <!-- TAGS -->
+                <div class="eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>登录</span></h5>
+                        <form method="post" action="index.html">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="email" class="form-control password-reset-link" name="EMAIL1" placeholder="输入您的邮箱" required />
+
+                            </div><label></label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="PASSWORD" style="mso-endnote-display: none" placeholder="输入您的密码" required />
+
+                            </div><label></label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="CHECK" placeholder="输入3+11=？" required />
+
+                            </div><label></label>
+                            <div class="input-group">
+                                    <input type="submit" value="Sign in"  name="in" class="btn btn-default" />
+                                <div>
+                                    <a href="#sidepanel1" class="eskimo-panel-open"><i href="#end" class="btn btn-default">Forget your password？</i>
+{#                                        <marquee direction="down"></marquee>#}
+                                    </a>
+                                </div>
+
+                            </div>
+
+
+                            <label></label>
+
+                        </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- 注册 -->
+    <div id="side3">
+        <aside id="sidepanel3" class="eskimo-panel">
+            <div class="eskimo-panel-inner">
+                <!-- CLOSE SLIDE PANEL BUTTON -->
+                <a href="#" class="eskimo-panel-close"><i class="fa fa-times"></i></a>
+                <!-- TAGS -->
+                <div class="eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>注册</span></h5>
+                        <form method="post" action="index.html">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="EMAIL2" placeholder="输入您的邮箱" required />
+
+                            </div><label></label>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="USERNAME" placeholder="输入您的用户名" required />
+
+                            </div><label></label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="PASSWORD_IN" style="mso-endnote-display: none" placeholder="输入您的密码" required />
+
+                            </div><label></label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="PASSWORD_CONFIRM" style="mso-endnote-display: none" placeholder="确认您的密码" required />
+
+                            </div><label></label>
+                            <div class="input-group-append">
+                                    <input type="submit" value="Sign Up" name="up" class="btn btn-default" />
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- 改密码 -->
+    <div id="side4">
+        <aside id="sidepanel4" class="eskimo-panel">
+            <div class="eskimo-panel-inner">
+                <!-- CLOSE SLIDE PANEL BUTTON -->
+                <a href="#" class="eskimo-panel-close"><i class="fa fa-times"></i></a>
+                <!-- TAGS -->
+                <div class="eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>更改密码</span></h5>
+                        <form method="post" action="index.html">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="PASSWORD_IN" style="mso-endnote-display: none" placeholder="输入您的密码" required />
+
+                            </div><label></label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="PASSWORD_CONFIRM" style="mso-endnote-display: none" placeholder="确认您的密码" required />
+
+                            </div><label></label>
+                            <div class="input-group-append">
+                                    <input type="submit" value="change" name="change" class="btn btn-default" />
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- FULLSCREEN SEARCH -->
+    <div id="eskimo-fullscreen-search">
+        <div id="eskimo-fullscreen-search-content">
+            <a href="#" id="eskimo-close-search"><i class="fa fa-times"></i></a>
+            <form role="search" method="get" action="search.html" class="eskimo-lg-form">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Enter a keyword..." name="s" />
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- JS FILES -->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/salvattore.min.js"></script>
+    <script src="/static/js/slick.min.js"></script>
+    <script src="/static/js/panel.js"></script>
+    <script src="/static/js/reading-position-indicator.js"></script>
+    <script src="/static/js/custom.js"></script>
+    <!-- POST SLIDER -->
+    <script>
+        (function($) {
+            "use strict";
+            $(document).ready(function() {
+                $('#eskimo-post-slider').slick({
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    slidesToScroll: 1,
+                    adaptiveHeight: true,
+                    slidesToShow: 1,
+                    arrows: true,
+                    dots: false,
+                    fade: true
+                });
+            });
+            $(window).on('load', function() {
+                $('#eskimo-post-slider').css('opacity', '1');
+                $('#eskimo-post-slider').parent().removeClass('eskimo-bg-loader');
+            });
+        })(jQuery);
+    </script>
+    <!-- POST CAROUSEL -->
+    <script>
+        (function($) {
+            "use strict";
+            $(document).ready(function() {
+                $('#eskimo-post-carousel').slick({
+                    infinite: false,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    dots: false,
+                    slidesToShow: 3,
+                    responsive: [{
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }, {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }]
+
+                });
+                $('#eskimo-post-carousel').css('opacity', '1');
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>

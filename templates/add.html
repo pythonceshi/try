@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addbook</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+    <style>
+        .container{
+            margin-top: 70px;
+        }
+        .btn{
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<h3>添加书籍</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="">编号</label>
+                    {# form-controlform-control控件，可以为input元素添加CSS定制样式#}
+                    <input type="value" class="form-control" name="num">
+                </div>
+                <div>
+                    <label for="">名称</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div>
+                    <label for="">作者</label>
+                    <input type="text" class="form-control" name="author">
+                </div>
+                <div>
+                    <label for="">简介</label>
+                    <input type="text" class="form-control" name="com">
+                </div>
+                <div>
+                    <label for="">最新话</label>
+                    <input type="text" class="form-control" name="new">
+                </div>
+                <div>
+                    <label for="">热度</label>
+                    <input type="text" class="form-control" name="pop">
+                </div>
+                <div>
+                    <label for="">种类</label>
+                    <input type="text" class="form-control" name="type">
+                </div>
+                <div>
+                    <label for="">网址</label>
+                    <input type="text" class="form-control" name="link">
+                </div>
+                {# btn btn-success：绿色按钮；pull-right：右移 #}
+                <input type="submit" class="btn btn-success pull-right">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

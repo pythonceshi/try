@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>动漫之家排行爬取-2018201606李子豫</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/slick.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- READING POSITION INDICATOR -->
+    <progress value="0" id="eskimo-progress-bar">
+        <span class="eskimo-progress-container">
+            <span class="eskimo-progress-bar"></span>
+        </span>
+    </progress>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <!-- SIDEBAR -->
+                <div id="eskimo-sidebar">
+                    <div id="eskimo-sidebar-wrapper" class="d-flex align-items-start flex-column h-100 w-100">
+                        <!-- LOGO -->
+                        <div id="eskimo-logo-cell" class="w-100">
+                            <a class="eskimo-logo-link" href="index.html">
+                                <img src="/static/images/logo.png" class="eskimo-logo" alt="eskimo" />
+                            </a>
+                        </div>
+                        <!-- MENU CONTAINER -->
+                        <div id="eskimo-sidebar-cell" class="w-100">
+                            <!-- MOBILE MENU BUTTON -->
+                            <div id="eskimo-menu-toggle">MENU</div>
+                            <!-- MENU -->
+                            <nav id="eskimo-main-menu" class="menu-main-menu-container">
+                                <ul class="eskimo-menu-ul">
+                                    <li><a href="index.html">主页</a>
+                                    </li>
+                                    <li><a href="other-features.html">统计</a>
+
+                                    </li>
+                                    <li><a href="blog-3-column.html">漫画</a>
+{#                                         <ul class="sub-menu">#}
+{#                                            <li><a href="about.html">Demo 1</a></li>#}
+{#                                            <li><a href="about-2.html">Demo 2</a></li>#}
+{#                                        </ul>#}
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- SOCIAL MEDIA ICONS -->
+                        <div id="eskimo-social-cell" class="mt-auto w-100">
+                            <div id="eskimo-social-inner">
+                                <ul class="eskimo-social-icons">
+                                    <li><a href="#"><i class="fa fa-wechat"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-qq"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                                    <li><a href="https://github.com/yinahou/photo-html"><i class="fa fa-github"></i></a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TOP ICONS -->
+                <ul class="eskimo-top-icons">
+                    <li id="eskimo-panel-icon">
+                        <a href="#eskimo-panel" class="eskimo-panel-open"><i class="fa fa-bars"></i></a>
+                    </li>
+                    <li id="eskimo-search-icon">
+                        <a id="eskimo-open-search" href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+                <!-- PAGE TITLE -->
+                <div class="eskimo-page-title">
+                    <h1 class="no-border">漫画浏览</h1>
+                </div>
+                <!-- BLOG POSTS -->
+                <div class="eskimo-masonry-grid small-masonry">
+                    <div class="eskimo-three-columns" data-columns>
+                        {% for book in current_page %}
+                        <div class="card-masonry card-small">
+                            <div class="card">
+                                <a href={{book.pho}}>
+                                    <img class="card-vertical-img" src={{book.link}} />
+                                </a>
+                                <div class="card-border">
+                                    <div class="card-body">
+                                        <div class="card-category">
+                                            <a href="#">作者：{{ book.author }}<br></a>
+                                            <a href="#">简介：{{ book.com }}<br></a>
+                                            <a href="#">最新话：{{ book.new }}<br></a>
+                                            <a href="#">热度：{{ book.pop }}</a>
+                                        </div>
+                                        <h5 class="card-title">
+                                            <a href={{book.pho}}>{{ book.name }}</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+{#                       #}
+                    </div>
+                </div>
+                <!-- PAGINATION -->
+            <div class="eskimo-pager">
+                <ul class='pagination flex-wrap'>
+                    {% if current_page.has_previous %}
+                        <li class='page-item'>
+                            <a class='page-link' href="?page={{ current_page.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="disabled">
+                            <a class='disabled' href="" aria-label="Previous">
+                            <span aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% for item in page_range %}
+                        {% if current_page_num == item %}
+                            <li class='page-item active' ><a class='page-link' href="?page={{ item }}">{{ item }}</a></li>
+                            {% else %}
+                            <li class='page-item'><a class='page-link' href="?page={{ item }}">{{ item }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if current_page.has_next %}
+                        <li class='page-item'><a class='page-link' href="?page={{ current_page.next_page_number }}" aria-label="Next"><span aria-hidden="true"><i class="fa fa-chevron-right"></i></span></a></li>
+                        {% else %}
+                        <li class="disabled"><a class='disabled' href="" aria-label="Next"><span aria-hidden="true"></span></a></li>
+                    {% endif %}
+                <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+        </main>
+        <!-- FOOTER -->
+        <footer id="eskimo-footer">
+            <div class="container">
+                <div class="row eskimo-footer-wrapper">
+                    <!-- FOOTER WIDGET 1 -->
+                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                        <h5 class="eskimo-title-with-border"><span>我滴github</span></h5>
+                        <p><a href="about.html" class="btn btn-default">Read More</a></p>
+                    </div>
+                    <!-- FOOTER WIDGET 2 -->
+                    <div class="col-12 col-lg-6">
+                        <h5 class="eskimo-title-with-border"><span>注册</span></h5>
+                        <form method="post" action="index.html">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="EMAIL" placeholder="输入恁的邮箱" required />
+                                <div class="input-group-append">
+                                    <input type="submit" value="Sign up" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- CREDITS -->
+                <div class="eskimo-footer-credits">
+                    <p>
+                        Made with love by <a href="https://themeforest.net/user/egemenerd" target="_blank">Egemenerd</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- GO TO TOP BUTTON -->
+    <a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- SLIDE PANEL OVERLAY -->
+    <div id="eskimo-overlay"></div>
+    <!-- SLIDE PANEL -->
+    <div id="eskimo-panels">
+        <aside id="eskimo-panel" class="eskimo-panel">
+            <div class="eskimo-panel-inner">
+                <!-- CLOSE SLIDE PANEL BUTTON -->
+                <a href="#" class="eskimo-panel-close"><i class="fa fa-times"></i></a>
+                <!-- AUTHOR BOX -->
+                <div class="eskimo-author-box eskimo-widget">
+                    <div class="eskimo-author-img">
+                        <img src="/static/images/1.ico" alt="JOHN DOE" />
+                    </div>
+                    <h3><span>Yinahou</span></h3>
+                    <p class="eskimo-author-subtitle">2018201606_李子豫</p>
+
+                    <div class="eskimo-author-box-btn">
+                        <a class="btn btn-default" href="https://github.com/yinahou/photo-html">CONTACT ME</a>
+                    </div>
+                </div>
+                <!-- RECENT POSTS -->
+{#                <div class="eskimo-recent-entries eskimo-widget">#}
+{#                    <h5 class="eskimo-title-with-border"><span>Recent Posts</span></h5>#}
+{#                    <ul>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Ketchup Flavored Ice Cream!</a>#}
+{#                            <span class="post-date">May 28, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Hair You've Always Dreamed Of</a>#}
+{#                            <span class="post-date">May 27, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">15 Of The World's Best Carnivals</a>#}
+{#                            <span class="post-date">May 25, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">5 Ways to a Healthy Lifestyle</a>#}
+{#                            <span class="post-date">May 25, 2018</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="single-post.html">Best Breakfast In The World</a>#}
+{#                            <span class="post-date">May 23, 2018</span>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </div>#}
+                <!-- CATEGORIES -->
+                <div class="eskimo-categories eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>热门分类</span></h5>
+                    <ul>
+                        <li>
+                            <a href="category.html" title="The best restaurants, cafes, bars and shops in town.">冒险</a> <span class="badge badge-pill badge-default">32</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="An up-to-date, personal urban guide.">热血</a> <span class="badge badge-pill badge-default">24</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="Latest technology news and updates.">格斗</a> <span class="badge badge-pill badge-default">14</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="Travel advice, information and inspiration.">搞笑</a> <span class="badge badge-pill badge-default">53</span>
+                        </li>
+                        <li>
+                            <a href="category.html" title="The latest news about movies and TV shows.">恋爱</a> <span class="badge badge-pill badge-default">22</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- TAGS -->
+                <div class="eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>Tags</span></h5>
+                    <div class="eskimo-tag-cloud">
+                        <a href="/search.html?s=魔法">魔法<span>24</span></a>
+                        <a href="/search.html?s=冒险">冒险<span>33</span></a>
+                        <a href="/search.html?s=爱情">爱情<span>23</span></a>
+                        <a href="/search.html?s=仙侠">仙侠<span>12</span></a>
+                        <a href="/search.html?s=百合">百合<span>7</span></a>
+                        <a href="/search.html?s=校园">校园<span>23</span></a>
+                        <a href="/search.html?s=奇幻">奇幻<span>13</span></a>
+                        <a href="/search.html?s=格斗">格斗<span>9</span></a>
+                        <a href="/search.html?s=热血">热血<span>21</span></a>
+                        <a href="/search.html?s=科幻">科幻<span>15</span></a>
+                        <a href="/search.html?s=职场">职场<span>21</span></a>
+                        <a href="/search.html?s=治愈">治愈<span>20</span></a>
+                        <a href="/search.html?s=其他">其他<span>9</span></a>
+                        <a href="/search.html?s=宅系">宅系<span>12</span></a>
+                        <a href="/search.html?s=悬疑">悬疑<span>13</span></a>
+                        <a href="/search.html?s=励志">励志<span>17</span></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- FULLSCREEN SEARCH -->
+    <div id="eskimo-fullscreen-search">
+        <div id="eskimo-fullscreen-search-content">
+            <a href="#" id="eskimo-close-search"><i class="fa fa-times"></i></a>
+            <form role="search" method="get" action="search.html" class="eskimo-lg-form">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Enter a keyword..." name="s" />
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- JS FILES -->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/salvattore.min.js"></script>
+    <script src="/static/js/panel.js"></script>
+    <script src="/static/js/reading-position-indicator.js"></script>
+    <script src="/static/js/custom.js"></script>
+</body>
+
+</html>
